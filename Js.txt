@@ -1,0 +1,9 @@
+
+npx create-react-app 
+
+Page만들때 첫글자는 대문자
+
+npm install styled-components
+
+
+Styled-components 변수 설정 시 반드시 첫글자는 대문자
