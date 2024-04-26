@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import BasicTitle from './components/BasicTitle'
 import { DefaultButton } from './components/Buttons'
+import { HipsterButton } from './components/ExtendStyled'
+import Material from './components/Material'
 
 const Inline = () => {
   return (
@@ -13,6 +15,8 @@ const Inline = () => {
       </div>
       <BasicTitle special>Styled Components</BasicTitle>
       <DefaultButton>Button</DefaultButton>
+      <HipsterButton>Click me</HipsterButton>
+      <Material/>
     </>
   )
 }
