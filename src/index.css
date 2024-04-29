@@ -1,6 +1,8 @@
 
 :root {
   --primary-color:#645cff;
+  --MainBorder:1px solid red;
+  --white:#fff;
 }
 
 body {
@@ -10,6 +12,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f2f4f8;
 }
 
 code {
