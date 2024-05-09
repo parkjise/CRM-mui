@@ -1,0 +1,210 @@
+.section-login  {
+  @include grid($columns:1fr 1fr);
+  position: relative;
+  height: 100vh;
+  &-logo {
+    @include bg-name('hanwha');
+    @include bg(10rem,2.75875rem,100%,no-repeat);
+    @include position(absolute,3.75rem,initial, 6.25rem,);
+    z-index:1;
+  }
+}
+
+.login-visual {
+  @include position(relative);
+  background-image: linear-gradient(132deg, rgb(255, 252, 248) 32%, rgb(249, 234, 224) 100%),
+  url("../images/object-03.svg");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-repeat: no-repeat
+  ;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  &:before,&:after{
+    content: "";
+    width: 44.1875rem;
+    height: 25.375rem;
+    @include position(absolute);
+    background-size: 100%;
+  } 
+  &:before {
+    bottom: 0;
+    left: -6.25rem;
+    @include bg-name('object-01');
+  }
+  &:after {
+    top: -3.125rem;
+    right: -25rem;
+    @include bg-name('object-02');
+  }
+  &-img {
+    @include position(absolute,initial,0,initial,2rem);
+    // @include bg-name('cloud');
+    @include bg-name('img');
+    @include bg(47.75rem,27.5rem, 100%,no-repeat);
+  }
+  &-txt {
+    margin-top: 10rem;
+    padding-left: 6.25rem;
+    p {
+      font-size:2.8125rem;
+      font-weight: 300;
+      line-height: 110%;
+      color: $color-text-primary;
+      span {
+        display: block;
+        b {
+          font-weight: 300;
+          color: #F37321;
+        }
+      }
+      &:last-child {
+        margin-top: 1.25rem;
+        font-size: 1.25rem;
+        line-height: 1.875rem;
+      }
+    }
+  }
+}
+
+.login-form {
+  background-color: #FBFBFB;
+  @include flex(false,center,center);
+  h2 {
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 600;
+  }
+  &-input {
+    margin-top:3.125rem;
+    width: 380px;
+    fieldset +  fieldset{
+      margin-top: 1.875rem;
+    }
+    .input-ico{
+      position: relative;
+      span,button {
+        @include position(absolute,57%,initial, 20px,);
+        transform: translateY(-50%);
+        i {
+          font-size: 19px;
+        }
+      }
+      button {
+        left: auto;
+        right: 20px;
+        background-color: transparent;
+        i {
+          color: $color-text-light-grey;
+        }
+      }
+    }
+    .form-label {
+      display: block;
+      color: $color-text-light-grey;
+      margin-bottom: 10px;
+    }
+    .form-input {
+      width: calc(100% - 80px);
+      height: 28px;
+      padding-left: 60px;
+      padding-right: 20px;
+    }
+  }
+  &-check {
+    @include flex(true,space-between,center);
+    margin:1.875rem 0 3.125rem 0;
+  }
+  &-btn {
+    button {
+      display: block;
+      width: 100%;
+      height: 40px;
+      border-radius:4px;
+      font-size: 14px;
+      & + button {
+        margin-top: 1.875rem;
+      }
+    }
+    .signin {
+      background-color: $color-primary;
+      color: $color-white;
+      font-weight: 600;
+      box-shadow: 0 10px 15px rgba(243, 115, 33, 0.3) ;
+      @include btn-transition;
+      // position: relative;
+      // z-index: 1;
+      // &::after {
+      //   position: absolute;
+      //   content: "";
+      //   width: 0;
+      //   height: 100%;
+      //   top: 0;
+      //   right: 0;
+      //   z-index: -1;
+      //   background-color:  $color-primary-dark;
+      //   transition: all 0.3s ease;
+      // }
+      // &:hover::after {
+      //   left: 0;
+      //   width: 100%;
+      // }
+      &:hover {
+        background-color: $color-primary-dark;
+      }
+    }
+    .create {
+      background-color: transparent;
+      color: $color-navy;
+      font-weight: 500;
+      font-size: 16px;
+      @include btn-transition;
+      &:hover {
+        font-weight: 600;
+      }
+    }
+    .around {
+      background-color: $color-white;
+      border: 1px solid $color-border-form;
+      @include btn-transition;
+      &:hover {
+        box-shadow: 0 10px 15px rgba(202, 202, 202, 0.3) ;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .section-login {
+    @include grid($columns:1fr);
+    &-logo {
+      @include bg(14rem,3.862rem,100%,no-repeat);
+      @include position(absolute,3rem,initial, 3rem,);
+    }
+  }
+  .login-visual {
+    display: none;
+  }
+  .login-form {
+    @include flex(false,center,center);
+    padding: 0 2rem;
+    h2 {
+      text-align: center;
+      font-size: 4rem;
+      font-weight: 700;
+    }
+    &-input {
+      width: 100%;
+      .form-label {
+        font-size: 1.4rem;
+      }
+      fieldset +  fieldset{
+        margin-top: 3rem;
+      }
+    }
+    &-check {
+      font-size: 1.4rem;
+    }
+  }
+}

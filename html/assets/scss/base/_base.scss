@@ -1,0 +1,16 @@
+:lang(ko){font-family: 'Pretendard', sans-serif;}
+:lang(en){font-family: 'Poppins', sans-serif;}
+:lang(cn){font-family: 'NotoSansSC',sans-serif;}
+html {
+  font-size: 100%;
+}
+@media(max-width:1200px){
+  html {
+    font-size:92%;
+  }
+}
+@media(max-width:1000px){
+  html {
+    font-size:62.5%;
+  }
+}

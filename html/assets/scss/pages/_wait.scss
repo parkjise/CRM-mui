@@ -1,0 +1,151 @@
+
+.section-wait {
+  @include flex(true,'center','center');
+  background-color: $color-grey-light-1;
+  height: 100vh;
+}
+.blur-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  // z-index: -1;
+  overflow: hidden;
+  .float{
+    width: 100%;
+    height: 100%;
+    filter: blur(200px);
+    opacity: 0.5;
+    .circle{
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      position: absolute;
+      &.orange{
+        background-color: #F37321;
+        z-index: 2;
+        top: 35%;
+        left: 13%;
+      }
+      &.navy{
+        background-color: #353968;
+        right: 15%;
+        top: 55%;
+      }
+    }
+  }
+}
+.account {
+  position: relative;
+  z-index: 2;
+  width:1152px
+}
+.account-header {
+  @include flex(true,'space-between','center');
+  padding-bottom: 1.25rem;
+  &-logo {
+    width: 11.25rem;
+    height: 3.10375rem;
+    background-image: url(../images/hanwha.svg);
+    background-size: 100%;
+  }
+}
+.account-content {
+  @include flex(true,'','center');
+  @include account-box(1.5625rem, 0.5rem  0.125rem 3.875rem rgb(34, 51, 89,0.1));
+  width:calc(100% - 10rem);
+  padding: 5rem;
+  font-weight: 300;
+  color: $color-text-light-grey;
+  div{
+    flex: 1;
+  }
+  &-text{
+    p{
+      font-size: 1.875rem;
+      color: $color-text-primary;
+      line-height: 130%;
+      span{
+        display: block;
+        color:$color-text-light-grey;
+      }
+    }
+  }
+  &-activate{
+    ul{
+      padding: 1.25rem;
+      color:$color-text-grey;
+      li {
+        & + li{
+          padding-top: 1.875rem;
+        }
+        i{
+          display:inline-block;
+          padding-right: 0.9375rem;
+          font-size: 1.875rem;
+          color: #4172BE;
+          vertical-align: middle;
+          &.ri-close-circle-fill{
+            color: #CC563D;
+          }
+        }
+        &.active {
+          color: $color-text-primary;
+          font-weight: 400;
+        }
+        button{
+          margin-left: 1.25rem;
+        }
+      }
+    }
+  }
+  &.p0{
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+  }
+}
+@include tablet {
+  .account{
+    width:90%;
+  }
+  .account-content{
+    width:calc(100% - 6rem);
+    padding: 3rem;
+  }
+}
+
+@include mobile {
+  .section-wait {
+    @include flex(true,'center','start');
+    padding-top: 6rem;
+    height: calc(100vh - 6rem);
+  }
+  .account-content{
+    margin-top: 1rem;
+    @include flex(false,'','start');
+    &-text{
+      p{
+        font-size: 2rem;
+      }
+    }
+    &-activate{
+      ul{
+        padding: 3rem 0 0 0;
+        color:$color-text-grey;
+        font-size: 1.4rem;
+        li {
+          button {
+            display: block;
+            margin-top: 1rem;
+            margin-left: 2.4rem;
+          }
+        }
+      }
+    }
+  }
+  .blur-bg{
+    display: none;
+  }
+}

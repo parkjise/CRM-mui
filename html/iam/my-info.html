@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRM</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <section class="section-wait">
+    <div class="blur-bg">
+      <div class="float">
+        <div class="circle orange"></div>
+        <div class="circle navy"></div>
+      </div>
+    </div>
+    <div class="account">
+      <div class="account-header">
+        <h1 class="account-header-logo"></h1>
+        <div class="lang">
+          <div class="country">
+            <span class="lang-en"></span>
+            <!-- <span class="lang-ko"></span>
+            <span class="lang-cn"></span> -->
+          </div>
+          <div class="lang-select">Select Area</div>
+        </div>
+      </div>
+      <div class="account-content p0">
+        <div class="tab">
+          <div class="tab-menu">
+            <ul>
+              <li class="active"><a href="#"><i class="ri-account-circle-line"></i>My Information</a></li>
+              <li><a href="#"><i class="ri-user-received-line"></i>Request Authorization</a></li>
+              <li><a href="#"><i class="ri-history-line"></i>Request History</a></li>
+              <li><a href="#"><i class="ri-user-settings-line"></i>Admin</a></li>
+            </ul>
+          </div>
+          <div class="tab-content">
+            <div class="info-form-box">
+              <h3>Basic Information</h3>
+              <div class="row">
+                <div class="col-1-of-2">
+                  <div class="form-vertical">
+                    <label for="input01" class="form-label">Your Fullname (EN, default)</label>
+                    <input type="password" class="form-input" id="input01">
+                  </div>
+                  <div class="form-vertical">
+                    <label for="input02" class="form-label">Your Fullname (Local language)</label>
+                    <input type="password" class="form-input" id="input02">
+                  </div>
+                  <div class="form-vertical">
+                    <label for="input03" class="form-label">Email</label>
+                    <input type="password" class="form-input" id="input03">
+                  </div>
+                  <div class="form-vertical">
+                    <label for="input04" class="form-label">Mobile</label>
+                    <input type="password" class="form-input" id="input04">
+                  </div>
+                  <div class="form-vertical">
+                    <label for="input05" class="form-label">Company</label>
+                    <input type="password" class="form-input" id="input05">
+                  </div>
+                  <div class="form-vertical">
+                    <label for="input06" class="form-label">Department</label>
+                    <input type="password" class="form-input" id="input06">
+                  </div>
+                </div>
+              </div>
+              <div class="authorization">
+                <h3>Current Authorization</h3>
+                <div class="authorization-con">
+                  <p>There is no access authorization</p>
+                  <button type="button" class="h-btn h-btn-primary">Request Authorization</button>
+                </div>
+              </div>  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRM</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <section class="section-wait">
+    <div class="blur-bg">
+      <div class="float">
+        <div class="circle orange"></div>
+        <div class="circle navy"></div>
+      </div>
+    </div>
+    <div class="account">
+      <div class="account-header">
+        <h1 class="account-header-logo"></h1>
+        <div class="lang">
+          <div class="country">
+            <span class="lang-en"></span>
+            <!-- <span class="lang-ko"></span>
+            <span class="lang-cn"></span> -->
+          </div>
+          <div class="lang-select">Select Area</div>
+        </div>
+      </div>
+      <div class="account-content">
+        <div class="account-content-text">
+          <p>
+            <span>Few tasks are required to</span>
+            activate this account.
+          </p>
+        </div>
+        <div class="account-content-activate">
+          <ul>
+            <li><i class="ri-close-circle-fill"></i>Not Approved by admin yet</li>
+            <li class="active"><i class="ri-checkbox-circle-fill"></i>Email verification completed.  <button type="button" class="h-btn h-btn-grey h-btn-xs">Details</button></li>
+            <li><i class="ri-close-circle-fill"></i>Mobile is not verified yet.  <button type="button" class="h-btn h-btn-grey h-btn-xs">Details</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- modal -->
+  <div class="modal">
+    <div class="dimmed"></div>
+    <div class="modal-dialog">
+      <div class="mmodal-content">
+        <button type="button" class="btn-close"><i class="ri-close-line"></i></button>
+        <div class="modal-body">
+          <p>
+            If the email has not been 
+  sent to your mail box <span class="point">(xxx@xxx.net)</span>, please request verification email again.
+          </p>
+          <div class="form-group">
+            <div class="form-radio">
+              <input class="form-check-input" type="radio" name="formradiocolor9" id="" checked="">
+              <label class="form-check-label" for="formradioRight13">
+                Send to : xxx@xxx.net
+              </label>
+            </div>
+            <div class="flex aic">
+              <div class="form-radio">
+                <input class="form-check-input" type="radio" name="formradiocolor9" id="">
+                <label class="form-check-label" for="">
+                  Send to other :
+                </label>
+              </div>
+              <input type="text" class="form-input">
+            </div>
+          </div>
+        </div>
+        <div class="modal-btn">
+          <button type="button" class="h-btn h-btn-primary">Send Email</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

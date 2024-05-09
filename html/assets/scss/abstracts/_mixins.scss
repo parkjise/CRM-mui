@@ -1,0 +1,107 @@
+
+@mixin flex($isDirection:true,$justifyContent:'start',$alignItem:"center",$gap:0){
+  display:flex;
+  @if $isDirection == true{
+    flex-direction: row;
+  } @else {
+    flex-direction: column;
+  }
+
+  @if $justifyContent ==  "start"{
+    justify-content: flex-start;
+  } @else if $justifyContent ==  "center" {
+      justify-content: center;
+  } @else if $justifyContent ==  "end"{
+      justify-content: flex-end;
+  } @else if $justifyContent == "space-between"{
+      justify-content: space-between;
+  } @else {
+      justify-content: flex-start;
+  }
+  @if $alignItem == "center"{
+    align-items: center;
+  } @else if $alignItem == "start"{
+      align-items: flex-start;
+  } @else if $alignItem == "end"{
+      align-items: flex-end;
+  } @else {
+      align-items: center;
+  }
+  gap:$gap;
+}
+
+
+
+@mixin position($p:absolute,$t:null,$b:null,$l:null,$r:null){
+  position: $p;
+  top:$t;
+  bottom:$b;
+  left:$l;
+  right:$r;
+}
+
+// .fixed{
+//   @include position(fixed,$t:30px,$b:40px)
+// }
+
+@mixin ellipsis($line:1){
+  @if ($line == 1){
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  } @else {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+  }
+}
+
+@mixin grid($gap:null,$row-gap:null,$column-gap:null,$rows:null,$columns:null){
+  display:grid;
+  gap:$gap;
+  row-gap:$row-gap;
+  column-gap:$column-gap;
+  grid-template-rows:$rows; 
+  grid-template-columns:$columns;
+}
+@mixin account-box($bdrs:null,$box-shdow:null){
+  background-color: $color-white;
+  border-radius:$bdrs;
+  box-shadow:$box-shdow;
+  @content;
+}
+
+
+@mixin btn-transition{
+  transition: background-color 0.15s ease-in-out,
+  color 0.15s ease-in-out,
+  border  0.15s ease-in-out,
+  box-shadow 0.3s ease-in-out
+}
+
+@mixin bg($width,$height,$size:null,$repeat:null,$positionX:null, $positionY:null){
+  width: $width;
+  height:$height;
+  background-size: $size;
+  background-repeat: $repeat;
+  background-position: $positionX $positionY;
+}
+@mixin bg-name( $name,$path:"../images/",$format:"svg") {
+  background-image:url("#{$path}#{$name}.#{$format}");
+ 
+}
+
+@mixin mobile {
+  @media (max-width:#{$breakpoint-mobile}){
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width:#{$breakpoint-tablet}){
+    @content;
+  }
+}
+

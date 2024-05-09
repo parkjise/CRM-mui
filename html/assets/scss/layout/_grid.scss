@@ -1,0 +1,13 @@
+.row{
+
+}
+
+.col-1-of-2 {
+  @include grid(
+    1.875rem,
+    null,
+    null,
+    null,
+    repeat(2,2fr),
+    )
+}

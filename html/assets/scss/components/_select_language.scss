@@ -1,0 +1,15 @@
+.lang{
+  display: flex;
+  gap: 1.25rem;
+}
+.country{
+  span{
+    display: block;
+  }
+  .lang-en{
+    background-image: url(../images/usa.svg);
+    background-size: 100%;
+    width:1.625rem;
+    height:1.6875rem;
+  }
+}
